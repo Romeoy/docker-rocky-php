@@ -30,8 +30,8 @@ docker run -itd --name rockyphp -p 8080:80 rocky-nginx-php:0.1
 
 ## Handy Paths
 
-* nginx include: /etc/nginx/conf.d/*/*.conf
-* nginx vhosts' webroots: /var/www/html/<domain>/webroot/
+* nginx include: /etc/nginx/conf.d/\*/*.conf
+* nginx vhosts' webroots: /var/www/default/public/
 * nginx logs: /var/log/nginx/
 
 Ideally the above ones should be mounted from docker host
