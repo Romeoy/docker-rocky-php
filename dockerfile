@@ -35,13 +35,14 @@ RUN dnf install -y epel-release.noarch \
     dnf -y install php-redis \
         php-soap \
         php-pdo \
+        php-mysqlnd \
         composer \
         nginx && \
     dnf clean all && \
     rm -rf /var/cache/dnf
 
 # Configure things
-RUN sed -i -e 's|^;date.timezone =$|date.timezone = $TIME_ZONE|g' /etc/php.ini \
+RUN sed -i -e "s|^;date.timezone =$|date.timezone = $TIME_ZONE|g" /etc/php.ini \
     && mkdir -p /etc/nginx/conf.d/default \
     && mkdir -p /var/www/default/public \
 #    && mkdir -p /var/www/default/public/.well-known \
