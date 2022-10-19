@@ -1,4 +1,4 @@
-# rocky-nginx-php
+# docker-rocky-php
 
 ## About
 
