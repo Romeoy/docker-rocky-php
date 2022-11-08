@@ -18,7 +18,7 @@ Building image:
 ```
 docker build -t rocky-nginx-php:0.1 --rm .
 ```
-or overwrite the ENVIRONMENT arg to make Chinese developer use perfectly. 
+or overwrite the ENV arg to make Chinese developer use perfectly. 
 ```
 docker build --build-arg ENV=dev -t rocky-nginx-php:0.1 --rm .
 ```
