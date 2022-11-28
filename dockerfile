@@ -38,7 +38,8 @@ RUN dnf install -y epel-release.noarch \
         php-mysqlnd \
         php-opcache \
         composer \
-        nginx && \
+        nginx \
+        cronie && \
     dnf clean all && \
     rm -rf /var/cache/dnf
 
