@@ -2,7 +2,7 @@
 
 ## About
 
-Rockylinux + Nginx + PHP-FPM Docker image by <font color=#0000FF >Romeoy</font>
+Rockylinux + Nginx + PHP-FPM Docker image by <font color=#0000FF>Romeoy</font>
 
 ## Version
 

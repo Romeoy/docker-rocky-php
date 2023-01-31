@@ -44,7 +44,9 @@ RUN dnf install -y epel-release.noarch \
     rm -rf /var/cache/dnf
 
 # Configure things
-RUN sed -i -e "s|^;date.timezone =$|date.timezone = $TIME_ZONE|g" /etc/php.ini && \
+RUN sed -i -e "s|^;date.timezone =$|date.timezone = $TIME_ZONE|g" \
+           -e 's|^memory_limit = 128M$|memory_limit = 4096M|g' \
+           /etc/php.ini && \
     sed -i -e 's|^;zend_extension=opcache|zend_extension=opcache|g' \
            -e 's|^;opcache.enable=1|opcache.enable=1|g' \
            -e 's|^;opcache.enable_cli=1|opcache.enable_cli=1|g' \
