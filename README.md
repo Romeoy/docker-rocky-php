@@ -6,11 +6,11 @@ Rockylinux + Nginx + PHP-FPM Docker image by <font color=#0000FF>Romeoy</font>
 
 ## Version
 
-Rockylinux: 9.0
+Rockylinux: 9+
 
-Nginx: 1.20 (the latest version in Rockylinx base repo)
+Nginx: 1.20+ (the latest version in Rockylinux base repo)
 
-PHP: 8.1 (can be configured from 7.4 ~ 8.1)
+PHP: 8.1 (can be configured from 7.4 ~ 8.2)
 
 ## Usage
 
@@ -25,13 +25,13 @@ docker build --build-arg ENV=dev -t rocky-nginx-php:0.1 --rm .
 
 Run the Docker container:
 ```
-docker run -itd --name rockyphp -p 8080:80 rocky-nginx-php:0.1
+docker run -itd --name rocky-php -p 8080:80 rocky-nginx-php:0.1
 ```
 
 ## Handy Paths
 
 * nginx include: /etc/nginx/conf.d/\*/*.conf
-* nginx vhosts' webroots: /var/www/default/public/
+* nginx vhost root: /var/www/default/public/
 * nginx logs: /var/log/nginx/
 
 Ideally the above ones should be mounted from docker host
