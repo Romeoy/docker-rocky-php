@@ -46,6 +46,8 @@ RUN dnf install -y epel-release.noarch \
 # Configure things
 RUN sed -i -e "s|^;date.timezone =$|date.timezone = $TIME_ZONE|g" \
            -e 's|^memory_limit = 128M$|memory_limit = 4096M|g' \
+           -e 's|^upload_max_filesize = 2M$|upload_max_filesize = 20M|g' \
+           -e 's|^post_max_size = 8M$|post_max_size = 50M|g' \
            /etc/php.ini && \
     sed -i -e 's|^;zend_extension=opcache|zend_extension=opcache|g' \
            -e 's|^;opcache.enable=1|opcache.enable=1|g' \
