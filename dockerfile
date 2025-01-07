@@ -10,7 +10,7 @@ MAINTAINER romeo
 
 # define script variables
 ARG ENV=prod
-ARG PHP_VERSION=8.1
+ARG PHP_VERSION=8.3
 ARG TIME_ZONE=America/New_York
 
 # modify root password
@@ -86,6 +86,7 @@ RUN if [ $ENV = dev ]; then \
             vim \
             wget \
             procps-ng \
+            iputils \
             net-tools && \
         dnf clean all && \
         rm -rf /var/cache/dnf \
